@@ -19,3 +19,12 @@ function getFont(changeFont) {
 
   fontBtn.textContent = savedFont === 'Roboto' ? 'Hack' : 'Roboto';
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+  const el = document.getElementById('email');
+  if (!el) return;
+  const encoded = el.dataset.enc;
+  const email = String.fromCharCode(...encoded.split(',').map(n => parseInt(n, 10)));
+  el.href = 'mailto:' + email;
+  el.textContent = email;
+});
