@@ -7,7 +7,7 @@ document.querySelectorAll('a[href^="http"]').forEach(link => {
 
 function getFont(changeFont) {
   const fontBtn = document.getElementById('font-btn');
-  let savedFont = localStorage.getItem('font') || 'Roboto';
+  let savedFont = localStorage.getItem('font') || 'Hack';
 
   if (changeFont) {
     savedFont = savedFont === 'Roboto' ? 'Hack' : 'Roboto';
